@@ -1,0 +1,538 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>English Wonder — Kids English School</title>
+  <!-- 丸ゴシックフォント（M PLUS Rounded 1c）+ 英字フォント -->
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,600;1,300;1,600&family=M+PLUS+Rounded+1c:wght@300;400;500;700;800&family=DM+Mono:wght@300;400&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
+  <link rel="stylesheet" href="index.css" />
+</head>
+<body>
+
+  <!-- ========================================
+       ヘッダー（固定・全ページ共通）
+       ======================================== -->
+  <header id="header">
+    <div class="header-inner">
+
+      <!-- ============================================================
+           ロゴ画像の挿入方法
+           ============================================================
+           1. ロゴのPNGファイルを準備する
+              推奨仕様：
+                ・形式：PNG（透過対応）
+                ・高さ：40px 相当（@2x なら 80px で書き出す）
+                ・横幅：auto（比率を維持）
+                ・ヘッダー用：カラーロゴ（白背景に合わせて）
+           2. ファイルを images/ フォルダに入れる
+              例：images/logo.png
+           3. 下の src="images/logo.png" の部分を
+              実際のファイルパスに変更する
+           ============================================================ -->
+      <a href="index.html" class="logo">
+        <img src="img/ew_logo_yoko.png"
+             alt="English Wonder"
+             onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';" />
+        <!-- 画像が読み込めない場合のテキストフォールバック -->
+        <span class="logo-fallback" style="display:none;">
+          <span class="logo-en">English</span>
+          <span class="logo-wonder">WondeR</span>
+        </span>
+      </a>
+
+      <!-- センターナビゲーション -->
+      <nav class="nav-center">
+        <a href="about.html">about</a>
+        <a href="courses.html">course</a>
+        <a href="gallery.html">gallery</a>
+        <a href="news.html">news</a>
+        <a href="access.html">access</a>
+        <a href="contact.html">contact</a>
+      </nav>
+
+      <!-- 右側CTAボタン -->
+      <div class="header-right">
+        <a href="contact.html" class="btn-header">お問い合わせ</a>
+      </div>
+
+      <!-- ハンバーガーボタン（スマホ） -->
+      <button class="hamburger" id="hamburger" aria-label="メニュー">
+        <span></span><span></span>
+      </button>
+    </div>
+  </header>
+
+  <!-- モバイルメニュー -->
+  <div class="mobile-menu" id="mobileMenu">
+    <nav>
+      <a href="about.html"       class="mm-link">about<em>English Wonderについて</em></a>
+      <a href="courses.html"     class="mm-link">course<em>コース一覧</em></a>
+      <a href="gallery.html" class="mm-link">gallery<em>フォトギャラリー</em></a>
+      <a href="news.html"        class="mm-link">news<em>お知らせ</em></a>
+      <a href="access.html"      class="mm-link">access<em>アクセス</em></a>
+      <a href="contact.html" class="mm-link">contact<em>お問い合わせ</em></a>
+    </nav>
+  </div>
+
+  <!-- ========================================
+       ヒーローセクション
+       ======================================== -->
+  <section class="hero" id="hero">
+    <div class="hero-bg">
+      <!-- 【画像①】ヒーロー背景画像（全画面表示）
+           推奨サイズ：横 1600px 以上・縦 900px 以上
+           ↓ src を実際の画像パスに変更してください -->
+      <img src="img/key_visual_1.jpg"
+           alt="子どもたちが楽しく英語を学んでいる様子"
+           class="hero-img" />
+      <div class="hero-overlay"></div>
+    </div>
+
+    <div class="hero-content">
+      <p class="hero-eyebrow js-reveal">Mizue English School</p>
+
+      <!-- キャッチコピー：1行横並び
+           Learning（極太セリフ）is（細イタリック・シアン）Fun.（太イタリック・イエロー） -->
+      <h1 class="hero-title js-reveal">
+        <span class="ht-learning">English Wonder</span>
+        <!-- <span class="ht-is">is</span><span class="ht-fun">Fun.</span> -->
+      </h1>
+
+      <p class="hero-copy js-reveal">
+        英語を、あたりまえに。<br>
+        <span>あそびながら、からだで覚える。</span>
+      </p>
+
+      <div class="hero-actions js-reveal">
+        <a href="contact.html" class="btn-fill-m">体験レッスンを申し込む</a>
+        <a href="about.html" class="text-link" style="color:rgba(255,255,255,.5); border-color:rgba(255,255,255,.3);">
+          <span>詳しく見る</span>
+          <svg viewBox="0 0 40 12" fill="none"><line x1="0" y1="6" x2="36" y2="6" stroke="currentColor" stroke-width="1.5"/><polyline points="30,1 36,6 30,11" stroke="currentColor" stroke-width="1.5" fill="none"/></svg>
+        </a>
+      </div>
+    </div>
+
+    <div class="hero-scroll">
+      <span>scroll</span>
+      <div class="scroll-line"></div>
+    </div>
+  </section>
+
+  <!-- マーキー（流れるテキスト帯） -->
+  <div class="marquee-wrap">
+    <div class="marquee-track">
+      <span>無料体験レッスン受付中！</span><span class="sep">—</span>
+      <span>もっと英語をあたりまえに</span><span class="sep">—</span>
+      <span>無料体験レッスン受付中！</span><span class="sep">—</span>
+      <span>もっと英語をあたりまえに</span><span class="sep">—</span>
+      <span>無料体験レッスン受付中！</span><span class="sep">—</span>
+      <span>もっと英語をあたりまえに</span><span class="sep">—</span>
+      <span>無料体験レッスン受付中！</span><span class="sep">—</span>
+      <span>もっと英語をあたりまえに</span><span class="sep">—</span>
+    </div>
+  </div>
+
+  <!-- ========================================
+       イントロ（園について）
+       ======================================== -->
+  <section class="intro" id="about">
+    <div class="intro-inner">
+      <div class="intro-left">
+        <div class="intro-img-wrap">
+          <!-- 【画像②】イントロ左側・縦長写真
+               推奨サイズ：横 800px・縦 1000px 前後（縦長）
+               ↓ src を実際の画像パスに変更してください -->
+          <img src="img/photostrip_4.jpg"
+               alt="子どもたち" class="intro-img js-reveal" />
+          <div class="intro-img-accent"></div>
+        </div>
+      </div>
+      <div class="intro-right">
+        <span class="label-en js-reveal">Think of Living.</span>
+        <h2 class="intro-heading js-reveal">もっと英語を<br>あたりまえに。</h2>
+        <p class="intro-body js-reveal">
+          当スクールでは、<br>
+          お子さま一人ひとりの個性やペースを<br>
+          大切にしながら、<br>
+          楽しく安心して学べる<br>
+          環境づくりを心がけています。<br>
+        </p>
+        <a href="about.html" class="text-link js-reveal">
+          <span>English Wonderについて詳しく</span>
+          <svg viewBox="0 0 40 12" fill="none"><line x1="0" y1="6" x2="36" y2="6" stroke="currentColor" stroke-width="1.5"/><polyline points="30,1 36,6 30,11" stroke="currentColor" stroke-width="1.5" fill="none"/></svg>
+        </a>
+      </div>
+    </div>
+    <div class="intro-imgs-row">
+      <!-- 【画像③】イントロ下段・左（推奨：横 600px・比率 4:3）
+           ↓ src を実際の画像パスに変更してください -->
+      <img src="img/kinder_a_photo_1.jpg" alt="授業の様子" class="js-reveal" />
+      <!-- 【画像④】イントロ下段・中央（推奨：横 600px・比率 4:3）
+           ↓ src を実際の画像パスに変更してください -->
+      <img src="img/ew_christmasparty_2021.png" alt="授業の様子" class="js-reveal" />
+      <!-- 【画像⑤】イントロ下段・右（推奨：横 600px・比率 4:3）
+           ↓ src を実際の画像パスに変更してください -->
+      <img src="img/liza_photo_2.jpg" alt="授業の様子" class="js-reveal" />
+    </div>
+  </section>
+
+  <!-- ========================================
+       コース一覧（アコーディオン）
+       ======================================== -->
+  <section class="courses" id="courses">
+    <div class="courses-header js-reveal">
+      <span class="label-en">Course</span>
+      <h2>コース一覧</h2>
+    </div>
+    <div class="courses-accordion">
+
+      <!-- コース① kinder A -->
+      <div class="ca-item js-reveal" data-color="c">
+        <button class="ca-head" aria-expanded="false">
+          <div class="ca-head-left">
+            <!-- 【画像⑥】コース①サムネイル（推奨：正方形 72×72px 表示、元画像 300px 推奨）
+                 ↓ src を実際の画像パスに変更してください -->
+            <img src="img/kinder_a_photo_1.jpg" alt="kinder A" class="ca-thumb" />
+            <div class="ca-meta">
+              <span class="ca-tag">kinder A</span>
+              <h3>年少・小学生クラス <small>beginners</small></h3>
+            </div>
+          </div>
+          <span class="ca-icon" aria-hidden="true"></span>
+        </button>
+        <div class="ca-body">
+          <div class="ca-body-inner">
+            <!-- 【画像⑥-大】コース①詳細写真（推奨：横 900px・比率 16:10）
+                 ↓ src を実際の画像パスに変更してください -->
+            <img src="img/kinder_a_photo_1.jpg" alt="kinder A 授業風景" class="ca-detail-img" />
+            <div class="ca-detail-text">
+              <p class="ca-detail-lead">英語の世界へ初めて踏み出す小さな冒険者のためのクラスです。</p>
+              <ul class="ca-detail-list">
+                <li>対象：年少〜小学校低学年</li>
+                <li>定員：1クラス6名まで</li>
+                <li>授業時間：50分</li>
+                <li>週1日</li>
+              </ul>
+              <p>歌・ゲーム・絵本を通じて、英語を「音」として体に染み込ませます。</p>
+              <a href="contact.html" class="btn-outline-c" style="margin-top:20px; display:inline-block;">体験レッスンを申し込む →</a>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- コース② kinder B -->
+      <div class="ca-item js-reveal" data-color="m">
+        <button class="ca-head" aria-expanded="false">
+          <div class="ca-head-left">
+            <!-- 【画像⑦】コース②サムネイル（推奨：正方形 72×72px 表示、元画像 300px 推奨）
+                 ↓ src を実際の画像パスに変更してください -->
+            <img src="img/photostrip_3.jpg" alt="kinder B" class="ca-thumb" />
+            <div class="ca-meta">
+              <span class="ca-tag">kinder B</span>
+              <h3>年少・小学生クラス <small>intermediate</small></h3>
+            </div>
+          </div>
+          <span class="ca-icon" aria-hidden="true"></span>
+        </button>
+        <div class="ca-body">
+          <div class="ca-body-inner">
+            <!-- 【画像⑦-大】コース②詳細写真（推奨：横 900px・比率 16:10）
+                 ↓ src を実際の画像パスに変更してください -->
+            <img src="img/photostrip_3.jpg" alt="kinder B 授業風景" class="ca-detail-img" />
+            <div class="ca-detail-text">
+              <p class="ca-detail-lead">基礎を積み上げ、表現力を伸ばすステップアップクラスです。</p>
+              <ul class="ca-detail-list">
+                <li>対象：小学校中学年〜</li>
+                <li>定員：1クラス6名まで</li>
+                <li>授業時間：60分</li>
+                <li>週1回</li>
+              </ul>
+              <p>読む・書く・話す・聞くの4技能をバランスよく伸ばします。</p>
+              <a href="contact.html" class="btn-outline-c" style="margin-top:20px; display:inline-block;">体験レッスンを申し込む →</a>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- コース③ 親子クラス -->
+      <div class="ca-item js-reveal" data-color="y">
+        <button class="ca-head" aria-expanded="false">
+          <div class="ca-head-left">
+            <!-- 【画像⑧】コース③サムネイル（推奨：正方形 72×72px 表示、元画像 300px 推奨）
+                 ↓ src を実際の画像パスに変更してください -->
+            <img src="img/paretnts_me_photo_1.jpg" alt="親子クラス" class="ca-thumb" />
+            <div class="ca-meta">
+              <span class="ca-tag">parents &amp; me</span>
+              <h3>親子クラス <small>together</small></h3>
+            </div>
+          </div>
+          <span class="ca-icon" aria-hidden="true"></span>
+        </button>
+        <div class="ca-body">
+          <div class="ca-body-inner">
+            <!-- 【画像⑧-大】コース③詳細写真（推奨：横 900px・比率 16:10）
+                 ↓ src を実際の画像パスに変更してください -->
+            <img src="img/paretnts_me_photo_1.jpg" alt="親子クラス 授業風景" class="ca-detail-img" />
+            <div class="ca-detail-text">
+              <p class="ca-detail-lead">親子で一緒に英語を楽しむ、あたたかい時間をご用意しています。</p>
+              <ul class="ca-detail-list">
+                <li>対象：1歳半〜3歳（保護者同伴）</li>
+                <li>定員：1クラス6組まで</li>
+                <li>授業時間：45分（土曜日のみの開講です。）</li>
+                <li>週1回</li>
+              </ul>
+              <p>歌・リズム・おもちゃを使って五感で英語を楽しみます。</p>
+              <a href="contact.html" class="btn-outline-c" style="margin-top:20px; display:inline-block;">体験レッスンを申し込む →</a>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- コース④ 小学・中学生クラス -->
+      <div class="ca-item js-reveal" data-color="k">
+        <button class="ca-head" aria-expanded="false">
+          <div class="ca-head-left">
+            <!-- 【画像⑨】コース④サムネイル（推奨：正方形 72×72px 表示、元画像 300px 推奨）
+                 ↓ src を実際の画像パスに変更してください -->
+            <img src="img/english_wood.jpg" alt="after school" class="ca-thumb" />
+            <div class="ca-meta">
+              <span class="ca-tag">after school</span>
+              <h3>小学・中学生クラス <small>advanced</small></h3>
+            </div>
+          </div>
+          <span class="ca-icon" aria-hidden="true"></span>
+        </button>
+        <div class="ca-body">
+          <div class="ca-body-inner">
+            <!-- 【画像⑨-大】コース④詳細写真（推奨：横 900px・比率 16:10）
+                 ↓ src を実際の画像パスに変更してください -->
+            <img src="img/english_wood.jpg" alt="after school 授業風景" class="ca-detail-img" />
+            <div class="ca-detail-text">
+              <p class="ca-detail-lead">学校英語を超えた、本物の英語力を育てるクラスです。</p>
+              <ul class="ca-detail-list">
+                <li>対象：小学校高学年〜中学生</li>
+                <li>定員：1クラス8名まで</li>
+                <li>授業時間：60分</li>
+                <li>週1〜2回受講可能</li>
+              </ul>
+              <p>英検・学校テスト対策も含め、実践的なコミュニケーション能力を高めます。</p>
+              <a href="contact.html" class="btn-outline-c" style="margin-top:20px; display:inline-block;">体験レッスンを申し込む →</a>
+            </div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ========================================
+       フォトストリップ（横スクロール写真帯）
+       ======================================== -->
+  <div class="photostrip">
+    <div class="photostrip-track">
+      <!-- 【画像⑩〜⑮】フォトストリップ（6枚 × 2セット）
+           推奨サイズ：横 500px・縦 350px
+           ↓ 各 src を実際の画像パスに変更してください
+           ※ 2セット目も同じ画像を並べてください（ループ用） -->
+      <img src="img/ew_christmasparty_2023.png" alt="教室の様子" />
+      <img src="img/Halloween_2.jpg" alt="教室の様子" />
+      <img src="img/kinder_a_christmas_2025_2.jpg" alt="教室の様子" />
+      <img src="img/star_festival.jpg" alt="教室の様子" />
+      <img src="img/photostrip_2.jpg" alt="教室の様子" />
+      <img src="img/ew_christmasparty_2021.png" alt="教室の様子" />
+      <img src="img/ew_christmasparty_2023.png" alt="教室の様子" />
+      <img src="img/Halloween_2.jpg" alt="教室の様子" />
+      <img src="img/kinder_a_christmas_2025_2.jpg" alt="教室の様子" />
+      <img src="img/star_festival.jpg" alt="教室の様子" />
+      <img src="img/photostrip_2.jpg" alt="教室の様子" />
+      <img src="img/ew_christmasparty_2021.png" alt="教室の様子" />
+    </div>
+  </div>
+
+  <!-- ========================================
+       横長バナー広告（画像がそのままボタン）
+       ========================================
+       ▼ 推奨サイズ：横 1320px × 縦 200px（PC）
+         スマホは height が自動調整されます
+       ▼ リンク先：<a href="..."> の href を変更してください
+       ▼ 画像：<img src="..."> の src を変更してください
+       ======================================== -->
+  <div class="banner-wide js-reveal">
+    <!-- ↓ href をリンク先URLに変更してください -->
+    <a href="contact.html" class="banner-link">
+
+      <!-- ↓ src を実際のバナー画像パスに変更してください
+           推奨サイズ：横 1320px × 縦 200px -->
+      <img src="https://images.unsplash.com/photo-1503676260728-1c00da094a0b?w=1320&q=80"
+           alt="バナー画像"
+           class="banner-img" />
+
+    </a>
+  </div>
+
+  <!-- ========================================
+       お知らせセクション
+       ======================================== -->
+  <section class="news" id="news">
+    <div class="news-header js-reveal">
+      <div>
+        <span class="label-en">News</span>
+        <h2>お知らせ</h2>
+      </div>
+      <a href="news.html" class="text-link">
+        <span>一覧を見る</span>
+        <svg viewBox="0 0 40 12" fill="none"><line x1="0" y1="6" x2="36" y2="6" stroke="currentColor" stroke-width="1.5"/><polyline points="30,1 36,6 30,11" stroke="currentColor" stroke-width="1.5" fill="none"/></svg>
+      </a>
+    </div>
+    <div class="news-grid">
+      <!-- お知らせカード①
+           【画像⑯】推奨サイズ：横 600px・比率 16:10
+           ↓ src・日付・タイトルを変更してください -->
+      <a href="news.html" class="news-card js-reveal">
+        <div class="news-card-img">
+          <img src="https://images.unsplash.com/photo-1503676260728-1c00da094a0b?w=600&q=70" alt="" />
+        </div>
+        <div class="news-card-body">
+          <span class="news-cat">2026年度 カレンダー</span>
+          <time>2026 / 03 / 25</time>
+          <h3>2026年度版にカレンダーを更新しました。</h3>
+        </div>
+      </a>
+      <!-- お知らせカード②
+           【画像⑰】推奨サイズ：横 600px・比率 16:10
+           ↓ src・日付・タイトルを変更してください -->
+      <a href="news.html" class="news-card js-reveal">
+        <div class="news-card-img">
+          <img src="https://images.unsplash.com/photo-1551966775-a4ddc8df052b?w=600&q=70" alt="" />
+        </div>
+        <div class="news-card-body">
+          <span class="news-cat">英検合格者発表！</span>
+          <time>2026 / 04 / 01</time>
+          <h3>2025年度英検合格者を発表します!</h3>
+        </div>
+      </a>
+      <!-- お知らせカード③
+           【画像⑱】推奨サイズ：横 600px・比率 16:10
+           ↓ src・日付・タイトルを変更してください -->
+      <a href="news.html" class="news-card js-reveal">
+        <div class="news-card-img">
+          <img src="https://images.unsplash.com/photo-1571210862729-78a52d3779a2?w=600&q=70" alt="" />
+        </div>
+        <div class="news-card-body">
+          <span class="news-cat">イベント記録</span>
+          <time>2025 / 12 / 26</time>
+          <h3>季節ごとのイベントの風景を更新してます！</h3>
+        </div>
+      </a>
+    </div>
+  </section>
+
+  <!-- ========================================
+       アクセス
+       ======================================== -->
+  <section class="access" id="access">
+    <div class="access-inner">
+      <div class="access-left js-reveal">
+        <span class="label-en">Access</span>
+        <h2>アクセス</h2>
+        <div class="access-info">
+          <p><strong>English Wonder</strong></p>
+          <!-- ↓ 住所を変更する場合はここを編集してください -->
+          <p>〒132-0025<br>東京都江戸川区瑞江4-45-8<br>ディアシティ101</p>
+          <p>
+            <!-- ↓ 電話番号（href の数字と表示テキスト両方を変えてください） -->
+            TEL：<a href="tel:08066053335">080-6605-3335</a><br>
+            受付時間 ／ 月〜土 10:00–19:00
+          </p>
+        </div>
+      </div>
+      <div class="access-map js-reveal">
+        <!-- ========================================
+             Google マップ埋め込み URL の変更方法
+             ========================================
+             ① Google Maps（maps.google.co.jp）を開く
+             ② 表示したい場所（住所・施設名）を検索する
+             ③ 左側パネルの「共有」をクリック
+             ④ 「地図を埋め込む」タブをクリック
+             ⑤ 「HTMLをコピー」した <iframe> の
+                src="..." の中のURLをコピーする
+             ⑥ 下の src="..." の中身を丸ごと置き換える
+             ======================================== -->
+             <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2291.2415871049884!2d139.89659825930127!3d35.69411320167365!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x601887a82266b851%3A0xfb426ba49300f86c!2zRW5nbGlzaCBXb25kZXIg6Iux6Kqe5pWZ5a6k!5e0!3m2!1sja!2sjp!4v1777432700537!5m2!1sja!2sjp" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+        <!-- <iframe
+          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3242.3!2d139.88!3d35.70!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zMzXCsDQyJzAwLjAiTiAxMznCsDUyJzQ4LjAiRQ!5e0!3m2!1sja!2sjp!4v1610000000000"
+          allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade">
+        </iframe> -->
+      </div>
+    </div>
+  </section>
+
+  <!-- ========================================
+       お問い合わせCTA
+       ======================================== -->
+  <section class="contact-cta" id="contact">
+    <div class="contact-cta-inner js-reveal">
+      <span class="label-en">Contact</span>
+      <h2>お問い合わせ</h2>
+      <p>ご相談・ご質問はお気軽にどうぞ。</p>
+      <div class="contact-cta-methods">
+        <div class="contact-tel">
+          <span>電話でのお問い合わせ</span>
+          <!-- ↓ 電話番号を変更してください -->
+          <a href="tel:08066053335">080-6605-3335</a>
+          <small>受付時間 ／ 月〜土 10:00–19:00</small>
+        </div>
+        <div class="contact-form-link">
+          <span>メールでのお問い合わせ</span>
+          <a href="contact.html" class="btn-outline-c">お問い合わせフォームへ →</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========================================
+       フッター
+       ======================================== -->
+  <footer>
+    <div class="footer-inner">
+      <div class="footer-logo">
+        <!-- フッターロゴ（白抜きPNG推奨）
+             ↓ src を実際のロゴPNGパスに変更してください
+             推奨：白抜きPNG・高さ 36px 相当 -->
+        <img src="images/logo-white.png"
+             alt="English Wonder"
+             onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';" />
+        <span class="footer-logo-fallback" style="display:none;">
+          <span class="logo-en">English</span>
+          <span class="logo-wonder">WondeR</span>
+        </span>
+        <small>kids English school</small>
+        <div class="footer-info">
+          <p>〒132-0025 東京都江戸川区瑞江4-45-8 ディアシティ101<br>
+          TEL：080-4195-5664</p>
+        </div>
+      </div>
+      <nav class="footer-nav">
+        <a href="about.html">English Wonderについて</a>
+        <a href="courses.html">コース一覧</a>
+        <a href="gallery.html">フォトギャラリー</a>
+        <a href="news.html">お知らせ</a>
+        <a href="access.html">アクセス</a>
+        <a href="contact.html">お問い合わせ</a>
+      </nav>
+    </div>
+    <p class="footer-copy">©︎ 2026 English Wonder. All rights reserved.</p>
+    <div class="footer-cmyk">
+      <span style="color:var(--c)">C</span>
+      <span style="color:var(--m)">M</span>
+      <span style="color:var(--y)">Y</span>
+      <span style="color:#fff;opacity:.3">K</span>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+  <script src="index.js"></script>
+</body>
+</html>

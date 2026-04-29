@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8" /><meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>コース一覧 — English Wonder</title>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,600;1,300;1,600&family=M+PLUS+Rounded+1c:wght@300;400;500;700;800&family=DM+Mono:wght@300;400&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
+  <link rel="stylesheet" href="subpage.css" />
+</head>
+<body>
+  <header id="header"><div class="header-inner">
+    <a href="index.html" class="logo"><img src="img/ew_logo_yoko.png" alt="English Wonder" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';" /><span class="logo-fallback" style="display:none;"><span class="logo-en">English</span><span class="logo-wonder">WondeR</span></span></a>
+    <nav class="nav-center"><a href="about.html">about</a><a href="courses.html">course</a><a href="gallery.html">gallery</a><a href="news.html">news</a><a href="access.html">access</a><a href="contact.html">contact</a></nav>
+    <div class="header-right"><a href="contact.html" class="btn-header">お問い合わせ</a></div>
+    <button class="hamburger" id="hamburger" aria-label="メニュー"><span></span><span></span></button>
+  </div></header>
+  <div class="mobile-menu" id="mobileMenu"><nav>
+    <a href="about.html"   class="mm-link">about<em>English Wonderについて</em></a>
+    <a href="courses.html" class="mm-link">course<em>コース一覧</em></a>
+    <a href="gallery.html" class="mm-link">gallery<em>フォトギャラリー</em></a>
+    <a href="news.html"    class="mm-link">news<em>お知らせ</em></a>
+    <a href="access.html"  class="mm-link">access<em>アクセス</em></a>
+    <a href="contact.html" class="mm-link">contact<em>お問い合わせ</em></a>
+  </nav></div>
+
+  <div class="page-header">
+    <nav class="breadcrumb"><a href="index.html">home</a><span>/</span><span class="current">course</span></nav>
+    <div class="page-header-inner">
+      <span class="label-en">Course</span>
+      <h1>コース一覧</h1>
+      <span class="page-title-en">Find Your Course.</span>
+      <p>お子さまの年齢やレベルに合わせた<br>4つのコースをご用意しています。</p>
+    </div>
+  </div>
+
+  <!-- コース一覧（交互レイアウト） -->
+  <section class="sp-section" style="padding:0;">
+    <div class="cp-list">
+
+      <!-- コース① kinder A -->
+      <div class="cp-item">
+        <div class="cp-img-wrap">
+          <!-- 【コース①写真】推奨：横 800px・4:3
+               ↓ src を変更してください -->
+          <img src="img/kinder_a_photo_1.jpg" alt="kinder A" />
+          <div class="cp-badge" style="background:var(--c)">kinder A</div>
+        </div>
+        <div class="cp-text js-reveal">
+          <span class="label-en">Beginners</span>
+          <h2>年少・小学生クラス</h2>
+          <p class="cp-lead">英語の世界へ初めて踏み出す小さな冒険者のためのクラスです。</p>
+          <ul class="cp-spec">
+            <li><span>対象</span>年少〜小学校低学年</li>
+            <li><span>定員</span>1クラス 6名まで</li>
+            <li><span>時間</span>50分 ／ 週1回</li>
+          </ul>
+          <p class="cp-desc">歌・ゲーム・絵本を通じて英語を「音」として体に染み込ませます。日本語訳に頼らず、英語のまま理解する力を育てます。</p>
+          <a href="contact.html" class="btn-fill-m" style="align-self:flex-start;">体験レッスンを申し込む →</a>
+        </div>
+      </div>
+
+      <!-- コース② kinder B -->
+      <div class="cp-item">
+        <div class="cp-img-wrap">
+          <!-- 【コース②写真】↓ src を変更してください -->
+          <img src="img/photostrip_3.jpg" alt="kinder B" />
+          <div class="cp-badge" style="background:var(--m)">kinder B</div>
+        </div>
+        <div class="cp-text js-reveal">
+          <span class="label-en">Intermediate</span>
+          <h2>年少・小学生クラス</h2>
+          <p class="cp-lead">基礎を積み上げ、表現力を伸ばすステップアップクラスです。</p>
+          <ul class="cp-spec">
+            <li><span>対象</span>小学校中学年〜</li>
+            <li><span>定員</span>1クラス 6名まで</li>
+            <li><span>時間</span>60分 ／ 週1回</li>
+          </ul>
+          <p class="cp-desc">読む・書く・話す・聞くの4技能をバランスよく伸ばします。自分の言葉で表現する力を養います。</p>
+          <a href="contact.html" class="btn-fill-m" style="align-self:flex-start;">体験レッスンを申し込む →</a>
+        </div>
+      </div>
+
+      <!-- コース③ 親子クラス -->
+      <div class="cp-item">
+        <div class="cp-img-wrap">
+          <!-- 【コース③写真】↓ src を変更してください -->
+          <img src="img/paretnts_me_photo_1.jpg" alt="親子クラス" />
+          <div class="cp-badge" style="background:var(--y);color:#000">parents &amp; me</div>
+        </div>
+        <div class="cp-text js-reveal">
+          <span class="label-en">Together</span>
+          <h2>親子クラス</h2>
+          <p class="cp-lead">親子で一緒に英語を楽しむ、あたたかい時間をご用意しています。</p>
+          <ul class="cp-spec">
+            <li><span>対象</span>1歳半〜3歳（保護者同伴）</li>
+            <li><span>定員</span>1クラス 6組まで</li>
+            <li><span>時間</span>45分 ／ 週1回</li>
+          </ul>
+          <p class="cp-desc">歌・リズム・おもちゃを使って五感で英語を楽しみます。</p>
+          <a href="contact.html" class="btn-fill-m" style="align-self:flex-start;">体験レッスンを申し込む →</a>
+        </div>
+      </div>
+
+      <!-- コース④ after school -->
+      <div class="cp-item">
+        <div class="cp-img-wrap">
+          <!-- 【コース④写真】↓ src を変更してください -->
+          <img src="img/english_wood.jpg" alt="after school" />
+          <div class="cp-badge" style="background:var(--text-dark)">after school</div>
+        </div>
+        <div class="cp-text js-reveal">
+          <span class="label-en">Advanced</span>
+          <h2>小学・中学生クラス</h2>
+          <p class="cp-lead">学校英語を超えた、本物の英語力を育てるクラスです。</p>
+          <ul class="cp-spec">
+            <li><span>対象</span>小学校高学年〜中学生</li>
+            <li><span>定員</span>1クラス 8名まで</li>
+            <li><span>時間</span>60分 ／ 週1回</li>
+          </ul>
+          <p class="cp-desc">英検・学校テスト対策も含め、実践的なコミュニケーション能力を高めます。</p>
+          <a href="contact.html" class="btn-fill-m" style="align-self:flex-start;">体験レッスンを申し込む →</a>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <section class="sp-cta js-reveal">
+    <div class="sp-cta-inner">
+      <span class="label-en" style="color:rgba(255,255,255,.45)">Contact</span>
+      <h2>まずは無料体験から</h2>
+      <p>どのコースか迷っている方もお気軽にご相談ください。</p>
+      <div class="sp-cta-btns">
+        <a href="contact.html" class="btn-fill-m">体験レッスンを申し込む →</a>
+        <a href="tel:08066053335" class="sp-cta-tel">080-6605-3335</a>
+      </div>
+    </div>
+  </section>
+
+  <footer><div class="footer-inner">
+    <div class="footer-logo"><img src="images/logo-white.png" alt="English Wonder" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';" /><span class="footer-logo-fallback" style="display:none;"><span class="logo-en">English</span><span class="logo-wonder">WondeR</span></span><small>kids English school</small><div class="footer-info"><p>〒132-0025 東京都江戸川区瑞江4-45-8 ディアシティ101<br>TEL：080-4195-5664</p></div></div>
+    <nav class="footer-nav"><a href="about.html">園について</a><a href="courses.html">コース一覧</a><a href="gallery.html">フォトギャラリー</a><a href="news.html">お知らせ</a><a href="access.html">アクセス</a><a href="contact.html">お問い合わせ</a></nav>
+  </div><p class="footer-copy">©︎ 2026 English Wonder. All rights reserved.</p><div class="footer-cmyk"><span style="color:var(--c)">C</span><span style="color:var(--m)">M</span><span style="color:var(--y)">Y</span><span style="color:#fff;opacity:.3">K</span></div></footer>
+  <script src="script.js"></script>
+</body>
+</html>

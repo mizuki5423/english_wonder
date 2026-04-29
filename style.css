@@ -1,0 +1,409 @@
+/* ============================================================
+   ENGLISH WONDER — 共通スタイル
+   テーマ：白背景 × シアン・マゼンタ・イエロー（CMYK）
+   フォント：丸ゴシック統一（M PLUS Rounded 1c）
+   ============================================================ */
+
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+:root {
+  --c: #00B8D4;
+  --m: #E91E8C;
+  --y: #FFD600;
+  --k: #ffffff;
+  --k2: #f7f7f7;
+  --k3: #e0e0e0;
+  --text: #1a1a1a;
+  --text-sub: #555555;
+  --text-dark: #111111;
+  --font-round: 'M PLUS Rounded 1c', 'Hiragino Maru Gothic ProN', 'Hiragino Maru Gothic Pro', sans-serif;
+  --font-mono:  'DM Mono', monospace;
+  --font-serif: 'Cormorant Garamond', serif;
+}
+
+html { scroll-behavior: smooth; }
+
+body {
+  font-family: var(--font-round);
+  background: var(--k);
+  color: var(--text);
+  overflow-x: hidden;
+  cursor: none;
+}
+
+/* ============================================================
+   カスタムカーソル
+   ============================================================ */
+.cursor {
+  position: fixed;
+  width: 10px; height: 10px;
+  background: var(--c);
+  border-radius: 50%;
+  pointer-events: none;
+  z-index: 9999;
+  transform: translate(-50%, -50%);
+  transition: width .2s, height .2s, background .2s;
+}
+.cursor-ring {
+  position: fixed;
+  width: 36px; height: 36px;
+  border: 1.5px solid var(--c);
+  border-radius: 50%;
+  pointer-events: none;
+  z-index: 9998;
+  transform: translate(-50%, -50%);
+  transition: width .3s, height .3s;
+}
+
+/* ============================================================
+   スクロールフェードイン
+   ============================================================ */
+.js-reveal {
+  opacity: 0;
+  transform: translateY(36px);
+  transition: opacity .8s cubic-bezier(.16,1,.3,1), transform .8s cubic-bezier(.16,1,.3,1);
+}
+.js-reveal.visible { opacity: 1; transform: translateY(0); }
+
+/* ============================================================
+   ヘッダー（全ページ共通）
+   ============================================================ */
+#header {
+  position: fixed;
+  top: 0; left: 0; right: 0;
+  z-index: 500;
+  background: rgba(255,255,255,.98);  /* ← 常時白背景 */
+  box-shadow: 0 1px 0 var(--k3);
+  transition: box-shadow .4s;
+}
+#header.scrolled {
+  background: rgba(255,255,255,.97);
+  box-shadow: 0 1px 0 var(--k3);
+  backdrop-filter: blur(12px);
+}
+
+/* ヘッダー内レイアウト：3カラム（ロゴ ／ センターナビ ／ CTA） */
+.header-inner {
+  display: grid;
+  grid-template-columns: 1fr auto 1fr;
+  align-items: center;
+  padding: 18px 48px;
+  transition: padding .4s;
+}
+#header.scrolled .header-inner { padding: 12px 48px; }
+
+/* ============================================================
+   ロゴ（PNG画像）
+   ============================================================ */
+.logo { display: flex; align-items: center; text-decoration: none; }
+
+/* ヘッダーロゴ画像
+   ↓ src="images/logo.png" を実際のロゴPNGパスに変更してください
+   推奨：カラーPNG・高さ 40px（@2x なら 80px で書き出し）
+   白背景なのでカラーロゴを使用してください */
+.logo img {
+  height: 40px;   /* ← ロゴの高さ（px）。変更可 */
+  width: auto;
+  display: block;
+}
+.logo-fallback { display: flex; flex-direction: column; line-height: 1; text-decoration: none; }
+.logo-en { font-family: var(--font-serif); font-style: italic; font-weight: 300; font-size: .85rem; letter-spacing: 2px; color: var(--c); }
+.logo-wonder { font-family: var(--font-serif); font-weight: 600; font-size: 1.5rem; letter-spacing: -.5px; color: var(--text-dark); }
+
+/* ============================================================
+   センターナビゲーション — 文字色：黒
+   ============================================================ */
+.nav-center { display: flex; align-items: center; gap: 32px; }
+.nav-center a {
+  font-family: var(--font-round);
+  font-size: .95rem;
+  font-weight: 700;              /* 太め */
+  text-decoration: none;
+  color: var(--text-dark);       /* ← 黒に変更 */
+  letter-spacing: .03em;
+  position: relative;
+  transition: color .2s;
+}
+.nav-center a:hover { color: var(--c); }
+.nav-center a::after {
+  content: '';
+  position: absolute;
+  left: 0; bottom: -3px;
+  width: 0; height: 2px;
+  background: var(--c);
+  transition: width .3s;
+}
+.nav-center a:hover::after { width: 100%; }
+
+/* ============================================================
+   右側CTAボタン — 少し大きく
+   ============================================================ */
+.header-right { display: flex; justify-content: flex-end; align-items: center; }
+.btn-header {
+  font-family: var(--font-round);
+  font-size: .92rem;            /* ← 大きく（元 .82rem） */
+  font-weight: 700;
+  text-decoration: none;
+  color: #fff;
+  background: var(--c);
+  padding: 13px 28px;           /* ← 上下・左右ともに広げた */
+  border-radius: 4px;
+  letter-spacing: .05em;
+  transition: background .2s, transform .15s;
+}
+.btn-header:hover { background: var(--m); transform: translateY(-1px); }
+
+/* ============================================================
+   ハンバーガーボタン（スマホ用）— 右上に固定
+   ============================================================ */
+.hamburger {
+  display: none;
+  flex-direction: column;
+  gap: 6px;
+  background: none;
+  border: none;
+  cursor: none;
+  padding: 6px;
+  /* SP時は position:fixed で右上に固定 */
+}
+.hamburger span {
+  display: block;
+  width: 28px; height: 2px;
+  background: var(--text-dark);
+  transition: transform .3s, opacity .3s;
+  border-radius: 2px;
+}
+.hamburger.open span:nth-child(1) { transform: translateY(8px) rotate(45deg); }
+.hamburger.open span:nth-child(2) { transform: translateY(-8px) rotate(-45deg); }
+
+/* ============================================================
+   モバイルメニュー
+   ============================================================ */
+.mobile-menu {
+  position: fixed;
+  inset: 0;
+  background: var(--k);
+  z-index: 400;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transform: translateX(100%);
+  transition: transform .5s cubic-bezier(.7,0,.3,1);
+  border-left: 1px solid var(--k3);
+}
+.mobile-menu.open { transform: translateX(0); }
+.mobile-menu nav { display: flex; flex-direction: column; gap: 28px; }
+.mm-link {
+  font-family: var(--font-round);
+  font-size: 2rem;
+  font-weight: 700;
+  color: var(--text-dark);
+  text-decoration: none;
+  display: flex;
+  align-items: baseline;
+  gap: 16px;
+  transition: color .2s;
+}
+.mm-link em {
+  font-family: var(--font-round);
+  font-size: .85rem;
+  font-style: normal;
+  font-weight: 400;
+  color: #bbb;
+}
+.mm-link:hover { color: var(--c); }
+
+/* ============================================================
+   共通：ラベル・リンク・ボタン・ページヘッダー
+   ============================================================ */
+.label-en {
+  font-family: var(--font-mono);
+  font-size: .65rem;
+  letter-spacing: 5px;
+  text-transform: uppercase;
+  color: var(--c);
+  margin-bottom: 10px;
+  display: block;
+}
+.text-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 12px;
+  text-decoration: none;
+  color: var(--text-sub);
+  font-family: var(--font-round);
+  font-size: .78rem;
+  font-weight: 500;
+  letter-spacing: .05em;
+  border-bottom: 1px solid var(--k3);
+  padding-bottom: 4px;
+  transition: color .2s, border-color .2s;
+}
+.text-link svg { width: 40px; }
+.text-link:hover { color: var(--c); border-color: var(--c); }
+
+/* ============================================================
+   共通：下層ページヘッダー（ダークヒーロースタイル）
+   ============================================================ */
+.page-header {
+  position: relative;
+  /* 上のpadding = 白ヘッダーの高さ(66px) + 余白(80px) */
+  padding: 146px 60px 80px;
+  background: var(--k2);           /* 白系のグレー背景 */
+  overflow: hidden;
+  border-bottom: 3px solid var(--c);
+}
+/* 右下にシアンのアクセント線 */
+.page-header::before {
+  content: '';
+  position: absolute; bottom: 0; left: 0;
+  width: 120px; height: 3px;
+  background: var(--m);
+  pointer-events: none;
+}
+/* 右上にイエローの円装飾（小さめ・控えめ） */
+.page-header::after {
+  content: '';
+  position: absolute; top: -60px; right: -60px;
+  width: 300px; height: 300px; border-radius: 50%;
+  background: radial-gradient(circle,
+    rgba(0,184,212,.08) 0%, rgba(255,214,0,.04) 50%, transparent 70%);
+  pointer-events: none;
+}
+.page-header-inner {
+  position: relative; z-index: 1;
+  max-width: 1100px; margin: 0 auto;
+}
+.page-header .label-en {
+  color: var(--c); font-size: .7rem; letter-spacing: 6px; margin-bottom: 16px;
+}
+.page-header h1 {
+  font-family: var(--font-round); font-weight: 800;
+  font-size: clamp(2.4rem, 5vw, 4.5rem);
+  letter-spacing: .04em; line-height: 1.15;
+  color: var(--text-dark);   /* 黒文字 */
+  margin-bottom: 12px;
+}
+.page-header .page-title-en {
+  font-family: 'Cormorant Garamond', serif; font-style: italic; font-weight: 300;
+  font-size: clamp(1.1rem, 2vw, 1.7rem);
+  color: var(--c);
+  display: block; margin-bottom: 20px; letter-spacing: .04em;
+}
+.page-header p {
+  font-family: var(--font-round); font-size: .9rem;
+  color: var(--text-sub);    /* グレー文字 */
+  line-height: 2; max-width: 500px;
+}
+/* パンくずリスト */
+.breadcrumb {
+  position: absolute; top: 24px; left: 60px; z-index: 1;
+  display: flex; align-items: center; gap: 8px;
+  font-family: var(--font-mono); font-size: .62rem; letter-spacing: 2px;
+}
+.breadcrumb a { color: var(--text-sub); text-decoration: none; transition: color .2s; }
+.breadcrumb a:hover { color: var(--c); }
+.breadcrumb span { color: var(--k3); }
+.breadcrumb .current { color: var(--text-dark); font-weight: 600; }
+
+.btn-outline-c {
+  display: inline-block;
+  border: 1.5px solid var(--c);
+  padding: 12px 28px;
+  font-family: var(--font-round);
+  font-size: .82rem;
+  font-weight: 600;
+  letter-spacing: .05em;
+  color: var(--c);
+  text-decoration: none;
+  border-radius: 4px;
+  transition: background .2s, color .2s;
+}
+.btn-outline-c:hover { background: var(--c); color: #fff; }
+
+.btn-fill-m {
+  display: inline-block;
+  background: var(--m);
+  padding: 16px 40px;
+  font-family: var(--font-round);
+  font-size: .9rem;
+  font-weight: 700;
+  letter-spacing: .08em;
+  color: #fff;
+  text-decoration: none;
+  border-radius: 4px;
+  transition: background .2s, transform .15s;
+}
+.btn-fill-m:hover { background: #c8176e; transform: translateY(-1px); }
+
+/* ============================================================
+   フッター（全ページ共通）
+   ============================================================ */
+footer {
+  background: var(--text-dark);
+  padding: 60px 60px 40px;
+  position: relative;
+  overflow: hidden;
+}
+.footer-inner {
+  display: grid;
+  grid-template-columns: 1fr 2fr;
+  gap: 60px;
+  max-width: 1100px;
+  margin: 0 auto 48px;
+  align-items: start;
+}
+.footer-logo { display: flex; flex-direction: column; gap: 10px; }
+
+/* フッターロゴ画像
+   ↓ src="images/logo-white.png" を実際の白抜きロゴPNGパスに変更してください
+   推奨：白抜きPNG（フッターは黒背景）・高さ 36px */
+.footer-logo img {
+  height: 36px;   /* ← フッターロゴの高さ（px） */
+  width: auto;
+}
+.footer-logo-fallback { display: flex; flex-direction: column; line-height: 1.2; }
+.footer-logo-fallback .logo-en { font-family: var(--font-serif); font-style: italic; font-size: .85rem; color: var(--c); letter-spacing: 2px; }
+.footer-logo-fallback .logo-wonder { font-family: var(--font-serif); font-weight: 600; font-size: 1.4rem; color: #fff; }
+.footer-logo small { font-family: var(--font-mono); font-size: .58rem; letter-spacing: 3px; color: #444; text-transform: uppercase; }
+.footer-info { margin-top: 4px; }
+.footer-info p { font-size: .78rem; color: #555; line-height: 2; font-family: var(--font-round); }
+.footer-nav { display: flex; flex-wrap: wrap; gap: 14px 36px; align-content: flex-start; padding-top: 4px; }
+.footer-nav a { font-family: var(--font-round); font-size: .82rem; color: #555; text-decoration: none; transition: color .2s; }
+.footer-nav a:hover { color: var(--c); }
+.footer-copy { font-family: var(--font-round); font-size: .62rem; letter-spacing: 1px; color: #333; max-width: 1100px; margin: 0 auto; padding-top: 28px; border-top: 1px solid #222; }
+.footer-cmyk { position: absolute; bottom: 40px; right: 60px; display: flex; gap: 8px; font-family: var(--font-mono); font-size: .65rem; letter-spacing: 5px; opacity: .2; }
+
+/* ============================================================
+   レスポンシブ（900px以下）
+   ============================================================ */
+@media (max-width: 900px) {
+  /* ヘッダー：ロゴ左・ハンバーガー右の2カラム */
+  .header-inner {
+    grid-template-columns: 1fr auto;
+    padding: 14px 20px;
+  }
+  #header.scrolled .header-inner { padding: 10px 20px; }
+
+  .nav-center { display: none; }
+  .header-right { display: none; } /* SPではCTAボタンも非表示 */
+
+  /* ハンバーガー：右上に固定配置 */
+  .hamburger {
+    display: flex;
+    position: fixed;
+    top: 16px;
+    right: 20px;
+    z-index: 600;   /* ヘッダーより前面 */
+    background: rgba(255,255,255,.9);
+    border-radius: 6px;
+    padding: 8px;
+    box-shadow: 0 2px 8px rgba(0,0,0,.1);
+  }
+
+  .page-header { padding: 110px 20px 52px; }
+  .breadcrumb { left: 20px; }
+  footer { padding: 48px 20px 36px; }
+  .footer-inner { grid-template-columns: 1fr; gap: 36px; }
+  .footer-cmyk { display: none; }
+}

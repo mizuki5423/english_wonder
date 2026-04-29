@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8" /><meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>お知らせ — English Wonder</title>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,600;1,300;1,600&family=M+PLUS+Rounded+1c:wght@300;400;500;700;800&family=DM+Mono:wght@300;400&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
+  <link rel="stylesheet" href="subpage.css" />
+  <link rel="stylesheet" href="news-index.css" />
+</head>
+<body>
+  <header id="header"><div class="header-inner">
+    <a href="index.html" class="logo"><img src="img/ew_logo_yoko.png" alt="English Wonder" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';" /><span class="logo-fallback" style="display:none;"><span class="logo-en">English</span><span class="logo-wonder">WondeR</span></span></a>
+    <nav class="nav-center"><a href="about.html">about</a><a href="courses.html">course</a><a href="gallery.html">gallery</a><a href="news.html">news</a><a href="access.html">access</a><a href="contact.html">contact</a></nav>
+    <div class="header-right"><a href="contact.html" class="btn-header">お問い合わせ</a></div>
+    <button class="hamburger" id="hamburger" aria-label="メニュー"><span></span><span></span></button>
+  </div></header>
+  <div class="mobile-menu" id="mobileMenu"><nav>
+    <a href="about.html"   class="mm-link">about<em>園について</em></a>
+    <a href="courses.html" class="mm-link">course<em>コース一覧</em></a>
+    <a href="gallery.html" class="mm-link">gallery<em>フォトギャラリー</em></a>
+    <a href="news.html"    class="mm-link">news<em>お知らせ</em></a>
+    <a href="access.html"  class="mm-link">access<em>アクセス</em></a>
+    <a href="contact.html" class="mm-link">contact<em>お問い合わせ</em></a>
+  </nav></div>
+
+  <div class="page-header">
+    <nav class="breadcrumb"><a href="index.html">home</a><span>/</span><span class="current">news</span></nav>
+    <div class="page-header-inner">
+      <span class="label-en">News</span>
+      <h1>お知らせ</h1>
+      <span class="page-title-en">Latest Updates.</span>
+      <p>English Wonderからの最新情報をお届けします。</p>
+    </div>
+  </div>
+
+  <!-- ========================================
+       お知らせ 3カテゴリ（上書き更新式）
+       ======================================== -->
+  <section class="news-index">
+    <div class="news-index-inner">
+
+      <!-- カードをクリックすると各ページへ -->
+      <a href="news-calendar.html" class="ni-card js-reveal">
+        <div class="ni-card-img">
+          <!-- 【カレンダー画像】推奨：横 800px・16:9
+               ↓ src を変更してください -->
+          <img src="https://images.unsplash.com/photo-1503676260728-1c00da094a0b?w=800&q=80" alt="カレンダー" />
+          <div class="ni-card-color" style="background:var(--c)"></div>
+        </div>
+        <div class="ni-card-body">
+          <span class="ni-label">更新のたびに上書き</span>
+          <h2>カレンダー更新</h2>
+          <p>月ごとの授業スケジュール・休講情報を掲載しています。</p>
+          <span class="ni-arrow">→</span>
+        </div>
+      </a>
+
+      <a href="news-eiken.html" class="ni-card js-reveal">
+        <div class="ni-card-img">
+          <!-- 【英検画像】推奨：横 800px・16:9
+               ↓ src を変更してください -->
+          <img src="https://images.unsplash.com/photo-1551966775-a4ddc8df052b?w=800&q=80" alt="英検合格者発表" />
+          <div class="ni-card-color" style="background:var(--m)"></div>
+        </div>
+        <div class="ni-card-body">
+          <span class="ni-label">更新のたびに上書き</span>
+          <h2>英検合格者発表</h2>
+          <p>各回の英検合格者・結果をお伝えします。</p>
+          <span class="ni-arrow">→</span>
+        </div>
+      </a>
+
+      <a href="news-events.html" class="ni-card js-reveal">
+        <div class="ni-card-img">
+          <!-- 【イベント画像】推奨：横 800px・16:9
+               ↓ src を変更してください -->
+          <img src="https://images.unsplash.com/photo-1571210862729-78a52d3779a2?w=800&q=80" alt="イベント記録" />
+          <div class="ni-card-color" style="background:var(--y)"></div>
+        </div>
+        <div class="ni-card-body">
+          <span class="ni-label">更新のたびに上書き</span>
+          <h2>イベント記録</h2>
+          <p>発表会・季節イベントなど活動の記録を掲載しています。</p>
+          <span class="ni-arrow">→</span>
+        </div>
+      </a>
+
+    </div>
+  </section>
+
+  <footer><div class="footer-inner">
+    <div class="footer-logo"><img src="images/logo-white.png" alt="English Wonder" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';" /><span class="footer-logo-fallback" style="display:none;"><span class="logo-en">English</span><span class="logo-wonder">WondeR</span></span><small>kids English school</small><div class="footer-info"><p>〒132-0025 東京都江戸川区瑞江4-45-8 ディアシティ101<br>TEL：080-4195-5664</p></div></div>
+    <nav class="footer-nav"><a href="about.html">園について</a><a href="courses.html">コース一覧</a><a href="gallery.html">フォトギャラリー</a><a href="news.html">お知らせ</a><a href="access.html">アクセス</a><a href="contact.html">お問い合わせ</a></nav>
+  </div><p class="footer-copy">©︎ 2026 English Wonder. All rights reserved.</p><div class="footer-cmyk"><span style="color:var(--c)">C</span><span style="color:var(--m)">M</span><span style="color:var(--y)">Y</span><span style="color:#fff;opacity:.3">K</span></div></footer>
+  <script src="script.js"></script>
+</body>
+</html>

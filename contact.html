@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>お問い合わせ — English Wonder</title>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,600;1,300;1,600&family=M+PLUS+Rounded+1c:wght@300;400;500;700;800&family=DM+Mono:wght@300;400&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
+  <link rel="stylesheet" href="contact.css" />
+</head>
+<body>
+
+  <header id="header">
+    <div class="header-inner">
+      <a href="index.html" class="logo">
+        <img src="img/ew_logo_yoko.png" alt="English Wonder" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';" />
+        <span class="logo-fallback" style="display:none;"><span class="logo-en">English</span><span class="logo-wonder">WondeR</span></span>
+      </a>
+      <nav class="nav-center">
+        <a href="about.html">about</a><a href="courses.html">course</a>
+        <a href="gallery.html">gallery</a><a href="news.html">news</a>
+        <a href="access.html">access</a><a href="contact.html">contact</a>
+      </nav>
+      <div class="header-right"><a href="contact.html" class="btn-header">お問い合わせ</a></div>
+      <button class="hamburger" id="hamburger" aria-label="メニュー"><span></span><span></span></button>
+    </div>
+  </header>
+  <div class="mobile-menu" id="mobileMenu">
+    <nav>
+      <a href="about.html"   class="mm-link">about<em>園について</em></a>
+      <a href="courses.html" class="mm-link">course<em>コース一覧</em></a>
+      <a href="gallery.html" class="mm-link">gallery<em>フォトギャラリー</em></a>
+      <a href="news.html"    class="mm-link">news<em>お知らせ</em></a>
+      <a href="access.html"  class="mm-link">access<em>アクセス</em></a>
+      <a href="contact.html" class="mm-link">contact<em>お問い合わせ</em></a>
+    </nav>
+  </div>
+
+  <div class="page-header">
+    <span class="label-en">Contact</span>
+    <h1>お問い合わせ</h1>
+    <p>体験レッスン・入園のご相談など、<br>お気軽にお問い合わせください。</p>
+  </div>
+
+  <section class="contact-page">
+    <div class="contact-page-inner">
+
+      <!-- 左：フォーム -->
+      <div class="contact-form-wrap js-reveal">
+        <form class="contact-form" id="contactForm">
+
+          <!-- お名前 -->
+          <div class="form-group">
+            <label for="name">お名前<span class="required">必須</span></label>
+            <input type="text" id="name" name="name" placeholder="山田 花子" required />
+          </div>
+
+          <!-- お子さまのお名前 -->
+          <div class="form-group">
+            <label for="child-name">お子さまのお名前<span class="optional">任意</span></label>
+            <input type="text" id="child-name" name="child-name" placeholder="山田 太郎" />
+          </div>
+
+          <!-- お子さまの年齢 -->
+          <div class="form-group">
+            <label for="child-age">お子さまの年齢<span class="optional">任意</span></label>
+            <select id="child-age" name="child-age">
+              <option value="">選択してください</option>
+              <option value="0-2">0〜2歳</option>
+              <option value="3-5">3〜5歳（年少〜年長）</option>
+              <option value="6-8">6〜8歳（小学1〜2年生）</option>
+              <option value="9-12">9〜12歳（小学3〜6年生）</option>
+              <option value="13-15">13〜15歳（中学生）</option>
+            </select>
+          </div>
+
+          <!-- メールアドレス -->
+          <div class="form-group">
+            <label for="email">メールアドレス<span class="required">必須</span></label>
+            <input type="email" id="email" name="email" placeholder="example@email.com" required />
+          </div>
+
+          <!-- 電話番号 -->
+          <div class="form-group">
+            <label for="tel">電話番号<span class="optional">任意</span></label>
+            <input type="tel" id="tel" name="tel" placeholder="090-0000-0000" />
+          </div>
+
+          <!-- お問い合わせ種別 -->
+          <div class="form-group">
+            <label>お問い合わせ種別<span class="required">必須</span></label>
+            <div class="radio-group">
+              <label class="radio-item"><input type="radio" name="type" value="trial" required /><span>体験レッスンの申し込み</span></label>
+              <label class="radio-item"><input type="radio" name="type" value="admission" /><span>入園のご相談</span></label>
+              <label class="radio-item"><input type="radio" name="type" value="course" /><span>コース内容について</span></label>
+              <label class="radio-item"><input type="radio" name="type" value="other" /><span>その他</span></label>
+            </div>
+          </div>
+
+          <!-- メッセージ -->
+          <div class="form-group">
+            <label for="message">メッセージ<span class="optional">任意</span></label>
+            <textarea id="message" name="message" rows="6" placeholder="ご質問・ご相談内容をお書きください。"></textarea>
+          </div>
+
+          <!-- 送信ボタン -->
+          <button type="submit" class="form-submit">
+            <span>送信する</span>
+            <svg viewBox="0 0 40 12" fill="none">
+              <line x1="0" y1="6" x2="36" y2="6" stroke="currentColor" stroke-width="1.5"/>
+              <polyline points="30,1 36,6 30,11" stroke="currentColor" stroke-width="1.5" fill="none"/>
+            </svg>
+          </button>
+
+          <!-- 送信完了メッセージ（JS制御） -->
+          <div class="form-success" id="formSuccess" style="display:none;">
+            <p>お問い合わせありがとうございます。<br>2営業日以内にご返信いたします。</p>
+          </div>
+
+        </form>
+      </div>
+
+      <!-- 右：アクセス情報 -->
+      <div class="contact-side js-reveal">
+
+        <div class="contact-side-block">
+          <span class="label-en">Phone</span>
+          <!-- ↓ 電話番号を変更してください -->
+          <a href="tel:08041955664" class="contact-phone">080-4195-5664</a>
+          <p class="contact-hours">受付時間 ／ 月〜土 10:00–19:00</p>
+        </div>
+
+        <div class="contact-side-block">
+          <span class="label-en">Address</span>
+          <!-- ↓ 住所を変更してください -->
+          <address>
+            〒132-0025<br>
+            東京都江戸川区瑞江4-45-8<br>
+            ディアシティ101
+          </address>
+        </div>
+
+        <div class="contact-side-block">
+          <span class="label-en">Map</span>
+          <!-- Google マップ（小）
+               ↓ src を実際のGoogle Maps埋め込みURLに変更してください -->
+          <div class="contact-map">
+            <iframe
+              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3242.3!2d139.88!3d35.70!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zMzXCsDQyJzAwLjAiTiAxMznCsDUyJzQ4LjAiRQ!5e0!3m2!1sja!2sjp!4v1610000000000"
+              allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade">
+            </iframe>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <footer>
+    <div class="footer-inner">
+      <div class="footer-logo">
+        <img src="images/logo-white.png" alt="English Wonder" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';" />
+        <span class="footer-logo-fallback" style="display:none;"><span class="logo-en">English</span><span class="logo-wonder">WondeR</span></span>
+        <small>kids English school</small>
+        <div class="footer-info"><p>〒132-0025 東京都江戸川区瑞江4-45-8 ディアシティ101<br>TEL：080-4195-5664</p></div>
+      </div>
+      <nav class="footer-nav">
+        <a href="about.html">園について</a><a href="courses.html">コース一覧</a>
+        <a href="gallery.html">フォトギャラリー</a><a href="news.html">お知らせ</a>
+        <a href="access.html">アクセス</a><a href="contact.html">お問い合わせ</a>
+      </nav>
+    </div>
+    <p class="footer-copy">©︎ 2026 English Wonder. All rights reserved.</p>
+    <div class="footer-cmyk"><span style="color:var(--c)">C</span><span style="color:var(--m)">M</span><span style="color:var(--y)">Y</span><span style="color:#fff;opacity:.3">K</span></div>
+  </footer>
+
+  <script src="script.js"></script>
+  <script src="contact.js"></script>
+</body>
+</html>

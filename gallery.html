@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>フォトギャラリー — English Wonder</title>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,600;1,300;1,600&family=M+PLUS+Rounded+1c:wght@300;400;500;700;800&family=DM+Mono:wght@300;400&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
+  <link rel="stylesheet" href="subpage.css" />
+  <link rel="stylesheet" href="gallery.css" />
+</head>
+<body>
+
+  <header id="header">
+    <div class="header-inner">
+      <a href="index.html" class="logo">
+        <img src="img/ew_logo_yoko.png" alt="English Wonder"
+             onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';" />
+        <span class="logo-fallback" style="display:none;">
+          <span class="logo-en">English</span><span class="logo-wonder">WondeR</span>
+        </span>
+      </a>
+      <nav class="nav-center">
+        <a href="about.html">about</a><a href="courses.html">course</a>
+        <a href="gallery.html">gallery</a><a href="news.html">news</a>
+        <a href="access.html">access</a><a href="contact.html">contact</a>
+      </nav>
+      <div class="header-right"><a href="contact.html" class="btn-header">お問い合わせ</a></div>
+      <button class="hamburger" id="hamburger" aria-label="メニュー"><span></span><span></span></button>
+    </div>
+  </header>
+
+  <div class="mobile-menu" id="mobileMenu">
+    <nav>
+      <a href="about.html"   class="mm-link">about<em>園について</em></a>
+      <a href="courses.html" class="mm-link">course<em>コース一覧</em></a>
+      <a href="gallery.html" class="mm-link">gallery<em>フォトギャラリー</em></a>
+      <a href="news.html"    class="mm-link">news<em>お知らせ</em></a>
+      <a href="access.html"  class="mm-link">access<em>アクセス</em></a>
+      <a href="contact.html" class="mm-link">contact<em>お問い合わせ</em></a>
+    </nav>
+  </div>
+
+  <!-- ページヘッダー -->
+  <div class="page-header">
+    <nav class="breadcrumb">
+      <a href="index.html">home</a><span>/</span><span class="current">gallery</span>
+    </nav>
+    <div class="page-header-inner">
+      <span class="label-en">Photo Gallery</span>
+      <h1>フォトギャラリー</h1>
+      <span class="page-title-en">Fun Moments.</span>
+      <p>English Wonderの楽しい日々をお届けします。</p>
+    </div>
+  </div>
+
+  <!-- ========================================
+       ギャラリーグリッド
+
+       【写真の追加・変更方法】
+         ・src・alt・gl-title の3か所を変更するだけ
+         ・サイズの種類：
+             通常  → <div class="gl-item">
+             横長  → <div class="gl-item gl-wide">（2列分）
+             縦長  → <div class="gl-item gl-tall">（2行分）
+
+       【推奨画像サイズ】
+             通常：横 600px・正方形
+             横長：横 1200px
+             縦長：横 600px・縦長
+
+       ホバーすると gl-title のテキストが表示されます。
+       ======================================== -->
+  <section class="gl-section">
+    <div class="gl-grid" id="glGrid">
+
+      <!-- 写真① 横長 -->
+      <div class="gl-item gl-wide">
+        <img src="https://images.unsplash.com/photo-1503676260728-1c00da094a0b?w=1200&q=80" alt="英語の授業" />
+        <div class="gl-overlay">
+          <!-- ↓ タイトルを変更してください -->
+          <span class="gl-title">英語の授業</span>
+        </div>
+      </div>
+
+      <!-- 写真② 通常 -->
+      <div class="gl-item">
+        <img src="https://images.unsplash.com/photo-1588072432836-e10032774350?w=600&q=80" alt="歌のレッスン" />
+        <div class="gl-overlay"><span class="gl-title">歌のレッスン</span></div>
+      </div>
+
+      <!-- 写真③ 縦長 -->
+      <div class="gl-item gl-tall">
+        <img src="https://images.unsplash.com/photo-1551966775-a4ddc8df052b?w=600&q=80" alt="絵本タイム" />
+        <div class="gl-overlay"><span class="gl-title">絵本タイム</span></div>
+      </div>
+
+      <!-- 写真④ 通常 -->
+      <div class="gl-item">
+        <img src="https://images.unsplash.com/photo-1509062522246-3755977927d7?w=600&q=80" alt="グループゲーム" />
+        <div class="gl-overlay"><span class="gl-title">グループゲーム</span></div>
+      </div>
+
+      <!-- 写真⑤ 通常 -->
+      <div class="gl-item">
+        <img src="https://images.unsplash.com/photo-1571210862729-78a52d3779a2?w=600&q=80" alt="親子クラス" />
+        <div class="gl-overlay"><span class="gl-title">親子クラス</span></div>
+      </div>
+
+      <!-- 写真⑥ 通常 -->
+      <div class="gl-item">
+        <img src="https://images.unsplash.com/photo-1580582932707-520aed937b7b?w=600&q=80" alt="発表会" />
+        <div class="gl-overlay"><span class="gl-title">発表会</span></div>
+      </div>
+
+      <!-- 写真⑦ 横長 -->
+      <div class="gl-item gl-wide">
+        <img src="https://images.unsplash.com/photo-1588072432836-e10032774350?w=1200&q=80" alt="ハロウィンイベント" />
+        <div class="gl-overlay"><span class="gl-title">ハロウィンイベント</span></div>
+      </div>
+
+      <!-- 写真⑧ 通常 -->
+      <div class="gl-item">
+        <img src="https://images.unsplash.com/photo-1503676260728-1c00da094a0b?w=600&q=80" alt="クリスマスパーティ" />
+        <div class="gl-overlay"><span class="gl-title">クリスマスパーティ</span></div>
+      </div>
+
+      <!-- 写真⑨ 通常 -->
+      <div class="gl-item">
+        <img src="https://images.unsplash.com/photo-1551966775-a4ddc8df052b?w=600&q=80" alt="スプリングイベント" />
+        <div class="gl-overlay"><span class="gl-title">スプリングイベント</span></div>
+      </div>
+
+      <!-- 写真⑩ 縦長 -->
+      <div class="gl-item gl-tall">
+        <img src="https://images.unsplash.com/photo-1571210862729-78a52d3779a2?w=600&q=80" alt="工作タイム" />
+        <div class="gl-overlay"><span class="gl-title">工作タイム</span></div>
+      </div>
+
+      <!-- 写真⑪ 通常 -->
+      <div class="gl-item">
+        <img src="https://images.unsplash.com/photo-1509062522246-3755977927d7?w=600&q=80" alt="おやつタイム" />
+        <div class="gl-overlay"><span class="gl-title">おやつタイム</span></div>
+      </div>
+
+      <!-- 写真⑫ 通常 -->
+      <div class="gl-item">
+        <img src="https://images.unsplash.com/photo-1580582932707-520aed937b7b?w=600&q=80" alt="サマーレッスン" />
+        <div class="gl-overlay"><span class="gl-title">サマーレッスン</span></div>
+      </div>
+
+    </div><!-- /.gl-grid -->
+
+    <!-- ライトボックス（クリックで拡大） -->
+    <div class="gl-lightbox" id="glLightbox">
+      <button class="gl-lb-close" id="glLbClose" aria-label="閉じる">✕</button>
+      <button class="gl-lb-prev"  id="glLbPrev"  aria-label="前の写真">←</button>
+      <button class="gl-lb-next"  id="glLbNext"  aria-label="次の写真">→</button>
+      <div class="gl-lb-img-wrap">
+        <!-- <img src="" alt="" id="glLbImg" /> -->
+      </div>
+      <p class="gl-lb-caption" id="glLbCaption"></p>
+    </div>
+
+  </section>
+
+  <footer>
+    <div class="footer-inner">
+      <div class="footer-logo">
+        <img src="images/logo-white.png" alt="English Wonder"
+             onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';" />
+        <span class="footer-logo-fallback" style="display:none;">
+          <span class="logo-en">English</span><span class="logo-wonder">WondeR</span>
+        </span>
+        <small>kids English school</small>
+        <div class="footer-info">
+          <p>〒132-0025 東京都江戸川区瑞江4-45-8 ディアシティ101<br>TEL：080-4195-5664</p>
+        </div>
+      </div>
+      <nav class="footer-nav">
+        <a href="about.html">園について</a><a href="courses.html">コース一覧</a>
+        <a href="gallery.html">フォトギャラリー</a><a href="news.html">お知らせ</a>
+        <a href="access.html">アクセス</a><a href="contact.html">お問い合わせ</a>
+      </nav>
+    </div>
+    <p class="footer-copy">©︎ 2026 English Wonder. All rights reserved.</p>
+    <div class="footer-cmyk">
+      <span style="color:var(--c)">C</span><span style="color:var(--m)">M</span>
+      <span style="color:var(--y)">Y</span><span style="color:#fff;opacity:.3">K</span>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+  <script src="gallery.js"></script>
+</body>
+</html>

@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8" /><meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>イベント記録 — English Wonder</title>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,600;1,300;1,600&family=M+PLUS+Rounded+1c:wght@300;400;500;700;800&family=DM+Mono:wght@300;400&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
+  <link rel="stylesheet" href="subpage.css" />
+  <link rel="stylesheet" href="news-detail.css" />
+</head>
+<body>
+  <header id="header"><div class="header-inner">
+    <a href="index.html" class="logo"><img src="img/ew_logo_yoko.png" alt="English Wonder" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';" /><span class="logo-fallback" style="display:none;"><span class="logo-en">English</span><span class="logo-wonder">WondeR</span></span></a>
+    <nav class="nav-center"><a href="about.html">about</a><a href="courses.html">course</a><a href="gallery.html">gallery</a><a href="news.html">news</a><a href="access.html">access</a><a href="contact.html">contact</a></nav>
+    <div class="header-right"><a href="contact.html" class="btn-header">お問い合わせ</a></div>
+    <button class="hamburger" id="hamburger" aria-label="メニュー"><span></span><span></span></button>
+  </div></header>
+  <div class="mobile-menu" id="mobileMenu"><nav>
+    <a href="about.html"   class="mm-link">about<em>園について</em></a>
+    <a href="courses.html" class="mm-link">course<em>コース一覧</em></a>
+    <a href="gallery.html" class="mm-link">gallery<em>フォトギャラリー</em></a>
+    <a href="news.html"    class="mm-link">news<em>お知らせ</em></a>
+    <a href="access.html"  class="mm-link">access<em>アクセス</em></a>
+    <a href="contact.html" class="mm-link">contact<em>お問い合わせ</em></a>
+  </nav></div>
+
+  <div class="page-header" style="border-bottom-color: var(--y);">
+    <nav class="breadcrumb"><a href="index.html">home</a><span>/</span><a href="news.html">news</a><span>/</span><span class="current">イベント</span></nav>
+    <div class="page-header-inner">
+      <span class="label-en" style="color:var(--y)">Events</span>
+      <h1>イベント記録</h1>
+      <span class="page-title-en" style="color:var(--y)">Memories.</span>
+      <p>発表会・季節イベントなど活動の記録を掲載しています。<br>イベントのたびに内容を上書き更新しています。</p>
+    </div>
+  </div>
+
+  <section class="nd-section">
+    <div class="nd-inner">
+
+      <!-- ================================================
+           最終更新日
+           ↓ 更新するたびにここの日付を変えてください
+           ================================================ -->
+      <div class="nd-updated nd-updated--y js-reveal">
+        <span class="nd-updated-label">最終更新日</span>
+        <time class="nd-updated-date">2026年 2月 15日</time>
+      </div>
+
+      <!-- ================================================
+           メインコンテンツ（上書き更新エリア）
+           ↓ イベントが終わるたびにこの中身を書き換えてください
+              写真を追加する場合は nd-photo-grid の img を増やしてください
+           ================================================ -->
+      <div class="nd-content js-reveal">
+
+        <!-- ↓ イベント名を変えてください -->
+        <h2 class="nd-h2">2025年度 英語発表会</h2>
+
+        <!-- ↓ 開催日・場所を変えてください -->
+        <p class="nd-event-meta">
+          <span>📅 2026年2月8日（土）</span>
+          <span>📍 English Wonder 教室</span>
+        </p>
+
+        <!-- ↓ 本文を書き換えてください -->
+        <p>今年も英語発表会を開催しました。子どもたちが練習してきた歌・セリフ・スピーチを発表し、保護者の皆さまに成長を見ていただける時間になりました。</p>
+
+        <!-- ========================================
+             イベント写真グリッド
+             推奨：横 600px・4:3
+             ↓ src を実際のイベント写真に差し替えてください
+               写真を追加するときは <div class="nd-photo-item"> ブロックをコピーして増やす
+             ======================================== -->
+        <div class="nd-photo-grid">
+
+          <div class="nd-photo-item">
+            <img src="https://images.unsplash.com/photo-1503676260728-1c00da094a0b?w=600&q=80" alt="発表会の様子" />
+          </div>
+          <div class="nd-photo-item">
+            <img src="https://images.unsplash.com/photo-1551966775-a4ddc8df052b?w=600&q=80" alt="発表会の様子" />
+          </div>
+          <div class="nd-photo-item">
+            <img src="https://images.unsplash.com/photo-1509062522246-3755977927d7?w=600&q=80" alt="発表会の様子" />
+          </div>
+          <div class="nd-photo-item">
+            <img src="https://images.unsplash.com/photo-1571210862729-78a52d3779a2?w=600&q=80" alt="発表会の様子" />
+          </div>
+          <div class="nd-photo-item">
+            <img src="https://images.unsplash.com/photo-1588072432836-e10032774350?w=600&q=80" alt="発表会の様子" />
+          </div>
+          <div class="nd-photo-item">
+            <img src="https://images.unsplash.com/photo-1580582932707-520aed937b7b?w=600&q=80" alt="発表会の様子" />
+          </div>
+
+        </div><!-- /.nd-photo-grid -->
+
+        <!-- ↓ 締めのメッセージを書き換えてください -->
+        <p>ご参加いただいた保護者の皆さま、ありがとうございました。子どもたちの成長を肌で感じられる、素敵な時間になりました。来年もまた開催します！</p>
+
+      </div><!-- /.nd-content -->
+
+      <div class="nd-back js-reveal">
+        <a href="news.html" class="nd-back-link">← お知らせ一覧に戻る</a>
+      </div>
+
+    </div>
+  </section>
+
+  <footer><div class="footer-inner">
+    <div class="footer-logo"><img src="images/logo-white.png" alt="English Wonder" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';" /><span class="footer-logo-fallback" style="display:none;"><span class="logo-en">English</span><span class="logo-wonder">WondeR</span></span><small>kids English school</small><div class="footer-info"><p>〒132-0025 東京都江戸川区瑞江4-45-8 ディアシティ101<br>TEL：080-4195-5664</p></div></div>
+    <nav class="footer-nav"><a href="about.html">園について</a><a href="courses.html">コース一覧</a><a href="gallery.html">フォトギャラリー</a><a href="news.html">お知らせ</a><a href="access.html">アクセス</a><a href="contact.html">お問い合わせ</a></nav>
+  </div><p class="footer-copy">©︎ 2026 English Wonder. All rights reserved.</p><div class="footer-cmyk"><span style="color:var(--c)">C</span><span style="color:var(--m)">M</span><span style="color:var(--y)">Y</span><span style="color:#fff;opacity:.3">K</span></div></footer>
+  <script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8" /><meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>アクセス — English Wonder</title>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,600;1,300;1,600&family=M+PLUS+Rounded+1c:wght@300;400;500;700;800&family=DM+Mono:wght@300;400&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
+  <link rel="stylesheet" href="subpage.css" />
+</head>
+<body>
+  <header id="header"><div class="header-inner">
+    <a href="index.html" class="logo"><img src="img/ew_logo_yoko.png" alt="English Wonder" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';" /><span class="logo-fallback" style="display:none;"><span class="logo-en">English</span><span class="logo-wonder">WondeR</span></span></a>
+    <nav class="nav-center"><a href="about.html">about</a><a href="courses.html">course</a><a href="gallery.html">gallery</a><a href="news.html">news</a><a href="access.html">access</a><a href="contact.html">contact</a></nav>
+    <div class="header-right"><a href="contact.html" class="btn-header">お問い合わせ</a></div>
+    <button class="hamburger" id="hamburger" aria-label="メニュー"><span></span><span></span></button>
+  </div></header>
+  <div class="mobile-menu" id="mobileMenu"><nav>
+    <a href="about.html"   class="mm-link">about<em>園について</em></a>
+    <a href="courses.html" class="mm-link">course<em>コース一覧</em></a>
+    <a href="gallery.html" class="mm-link">gallery<em>フォトギャラリー</em></a>
+    <a href="news.html"    class="mm-link">news<em>お知らせ</em></a>
+    <a href="access.html"  class="mm-link">access<em>アクセス</em></a>
+    <a href="contact.html" class="mm-link">contact<em>お問い合わせ</em></a>
+  </nav></div>
+
+  <div class="page-header">
+    <nav class="breadcrumb"><a href="index.html">home</a><span>/</span><span class="current">access</span></nav>
+    <div class="page-header-inner">
+      <span class="label-en">Access</span>
+      <h1>アクセス</h1>
+      <span class="page-title-en">Come Visit Us.</span>
+      <p>東京都江戸川区瑞江にあります。<br>お気軽にお越しください。</p>
+    </div>
+  </div>
+
+  <section class="sp-section">
+    <div class="ap-layout">
+
+      <!-- Google マップ（大） -->
+      <div class="ap-map-wrap js-reveal">
+        <!-- ================================================
+             Google マップ URL の変更方法
+             ================================================
+             ① Google Maps で住所を検索
+             ② 「共有」→「地図を埋め込む」
+             ③ 表示された iframe の src をコピー
+             ④ 下の src="..." を置き換える
+             ================================================ -->
+             <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2291.2415871049884!2d139.89659825930127!3d35.69411320167365!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x601887a82266b851%3A0xfb426ba49300f86c!2zRW5nbGlzaCBXb25kZXIg6Iux6Kqe5pWZ5a6k!5e0!3m2!1sja!2sjp!4v1777432700537!5m2!1sja!2sjp" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+        <!-- <iframe
+        <!-- <iframe
+          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3242.3!2d139.88!3d35.70!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zMzXCsDQyJzAwLjAiTiAxMznCsDUyJzQ4LjAiRQ!5e0!3m2!1sja!2sjp!4v1610000000000"
+          allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade">
+        </iframe> -->
+      </div>
+
+      <!-- アクセス情報 -->
+      <div class="ap-info-grid js-reveal">
+
+        <div class="ap-block">
+          <span class="label-en">Phone</span>
+          <!-- ↓ 電話番号を変更してください -->
+          <a href="tel:08041955664" class="ap-tel">080-4195-5664</a>
+          <p class="ap-hours">受付時間 ／ 月〜土 10:00–19:00</p>
+        </div>
+
+        <div class="ap-block">
+          <span class="label-en">Address</span>
+          <!-- ↓ 住所を変更してください -->
+          <address>〒132-0025<br>東京都江戸川区瑞江4-45-8<br>ディアシティ101</address>
+        </div>
+
+        <div class="ap-block">
+          <span class="label-en">Nearest Station</span>
+          <!-- ↓ 最寄り駅・アクセスを変更してください -->
+          <p>都営新宿線「瑞江駅」より徒歩○分<br>○○バス停より徒歩○分</p>
+        </div>
+
+        <div class="ap-block">
+          <span class="label-en">Hours</span>
+          <table class="ap-table">
+            <tr><th>月〜金</th><td>10:00 – 19:00</td></tr>
+            <tr><th>土曜日</th><td>10:00 – 17:00</td></tr>
+            <tr><th>日・祝</th><td>定休日</td></tr>
+          </table>
+        </div>
+
+        <a href="contact.html" class="btn-fill-m">体験レッスンを申し込む →</a>
+
+      </div>
+    </div>
+  </section>
+
+  <section class="sp-cta js-reveal">
+    <div class="sp-cta-inner">
+      <span class="label-en" style="color:rgba(255,255,255,.45)">Contact</span>
+      <h2>お気軽にご連絡ください</h2>
+      <p>見学・体験レッスンのお申し込みはお電話またはフォームから。</p>
+      <div class="sp-cta-btns">
+        <a href="contact.html" class="btn-fill-m">お問い合わせフォーム →</a>
+        <a href="tel:08041955664" class="sp-cta-tel">080-4195-5664</a>
+      </div>
+    </div>
+  </section>
+
+  <footer><div class="footer-inner">
+    <div class="footer-logo"><img src="images/logo-white.png" alt="English Wonder" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';" /><span class="footer-logo-fallback" style="display:none;"><span class="logo-en">English</span><span class="logo-wonder">WondeR</span></span><small>kids English school</small><div class="footer-info"><p>〒132-0025 東京都江戸川区瑞江4-45-8 ディアシティ101<br>TEL：080-4195-5664</p></div></div>
+    <nav class="footer-nav"><a href="about.html">園について</a><a href="courses.html">コース一覧</a><a href="gallery.html">フォトギャラリー</a><a href="news.html">お知らせ</a><a href="access.html">アクセス</a><a href="contact.html">お問い合わせ</a></nav>
+  </div><p class="footer-copy">©︎ 2026 English Wonder. All rights reserved.</p><div class="footer-cmyk"><span style="color:var(--c)">C</span><span style="color:var(--m)">M</span><span style="color:var(--y)">Y</span><span style="color:#fff;opacity:.3">K</span></div></footer>
+  <script src="script.js"></script>
+</body>
+</html>
